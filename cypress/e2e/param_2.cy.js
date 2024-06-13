@@ -1,3 +1,5 @@
+import testCases from '../fixtures/testCases.json'
+
 beforeEach(() => {
     cy.visit('https://sanitarskyi-ngx-admin.herokuapp.com/');
     cy.get('[alt="Material Light Theme"]', {timeout: 10000}).click();
@@ -6,68 +8,68 @@ beforeEach(() => {
 });
 describe('parametrized 2', () => {
 
-    const testCases = [
-        {testData: {
-                position: 'top-right',
-                title: 'test title',
-                content: 'test content',
-                time: '10000',
-                type: 'primary'
-            },
-            expectedResult: {
-                icon: 'email',
-                title: 'test title',
-                content: 'test content',
-                color: 'rgb(98, 0, 238)',
-                position: 'erwr'
-            }
-        }, {testData: {
-                position: 'bottom-right',
-                title: 'new title test 2',
-                content: 'new content title 2',
-                time: '10000',
-                type: 'info'
-            },
-            expectedResult: {
-                icon: 'question-mark',
-                title: 'new title test 2',
-                content: 'new content title 2',
-                color: 'rgb(4, 149, 238)',
-                position: 'erwr'
-            }
-        },
-        {testData: {
-                position: 'top-start',
-                title: 'new title test 3',
-                content: 'new content title 3',
-                time: '10000',
-                type: 'danger'
-            },
-            expectedResult: {
-                icon: 'flash',
-                title: 'new title test 3',
-                content: 'new content title 3',
-                color: 'rgb(176, 0, 32)',
-                position: 'erwr'
-            }
-        },
-        {testData: {
-                position: 'bottom-left',
-                title: 'new title test 4',
-                content: 'new content title 4',
-                time: '10000',
-                type: 'warning'
-            },
-            expectedResult: {
-                icon: 'alert-triangle',
-                title: 'new title test 4',
-                content: 'new content title 4',
-                color: 'rgb(255, 159, 5)',
-                position: 'erwr'
-            }
-        }
-
-    ];
+    // const testCases = [
+    //     {testData: {
+    //             position: 'top-right',
+    //             title: 'test title',
+    //             content: 'test content',
+    //             time: '10000',
+    //             type: 'primary'
+    //         },
+    //         expectedResult: {
+    //             icon: 'email',
+    //             title: 'test title',
+    //             content: 'test content',
+    //             color: 'rgb(98, 0, 238)',
+    //             position: 'erwr'
+    //         }
+    //     }, {testData: {
+    //             position: 'bottom-right',
+    //             title: 'new title test 2',
+    //             content: 'new content title 2',
+    //             time: '10000',
+    //             type: 'info'
+    //         },
+    //         expectedResult: {
+    //             icon: 'question-mark',
+    //             title: 'new title test 2',
+    //             content: 'new content title 2',
+    //             color: 'rgb(4, 149, 238)',
+    //             position: 'erwr'
+    //         }
+    //     },
+    //     {testData: {
+    //             position: 'top-start',
+    //             title: 'new title test 3',
+    //             content: 'new content title 3',
+    //             time: '10000',
+    //             type: 'danger'
+    //         },
+    //         expectedResult: {
+    //             icon: 'flash',
+    //             title: 'new title test 3',
+    //             content: 'new content title 3',
+    //             color: 'rgb(176, 0, 32)',
+    //             position: 'erwr'
+    //         }
+    //     },
+    //     {testData: {
+    //             position: 'bottom-left',
+    //             title: 'new title test 4',
+    //             content: 'new content title 4',
+    //             time: '10000',
+    //             type: 'warning'
+    //         },
+    //         expectedResult: {
+    //             icon: 'alert-triangle',
+    //             title: 'new title test 4',
+    //             content: 'new content title 4',
+    //             color: 'rgb(255, 159, 5)',
+    //             position: 'erwr'
+    //         }
+    //     }
+    //
+    // ];
 
 
     testCases.forEach(({testData, expectedResult}) => {
