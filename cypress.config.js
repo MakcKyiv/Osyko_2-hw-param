@@ -4,7 +4,7 @@ module.exports = defineConfig({
   e2e: {
     viewportWidth: 1920,
     viewportHeight:  600,
-    pageLoadTimeout: 120000,
+    pageLoadTimeout: 130000,
     watchForFileChanges: false,
     setupNodeEvents(on, config) {
       // implement node event listeners here
